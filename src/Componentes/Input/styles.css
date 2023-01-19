@@ -1,14 +1,86 @@
-.search-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: black;
+  outline: black;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background-color: white;
+}
+.wrapper {
+  width: 70%;
+  margin: 0 auto;
+}
+#search-container {
+  margin: 1em 0;
+}
+#search-container input {
+  background-color: transparent;
+  width: 40%;
+  border-bottom: 2px solid #110f29;
+  padding: 1em 0.3em;
+}
+#search-container input:focus {
+  border-bottom-color: black;
+}
+#search-container button {
+  padding: 1em 2em;
+  margin-left: 1em;
+  background-color: black;
+  color: #ffffff;
+  border-radius: 5px;
+  margin-top: 0.5em;
+}
+.button-value {
+  border: solid white;
+  padding: 1em 2.2em;
+  border-radius: 10px;
+  background-color: orange;
+  color: white;
+  cursor: pointer;
 }
 
-.input {
-  font-size: 1rem;
-}
-
-.products-cards {
+#products {
   display: grid;
-  grid-template-columns: repeat(auto-fill), minmax(150px, 1fr);
+  grid-template-columns: auto auto auto;
+  grid-column-gap: 1.5em;
+  padding: 2em 0;
+}
+
+img {
+  max-width: 100%;
+  object-fit: contain;
+  height: 15em;
+}
+
+.skill-bg {
+  padding-bottom: 50px;
+  padding-top: 50px;
+  text-align: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  box-sizing: border-box;
+  border: black;
+}
+
+.skills {
+  column-count: 3;
+  column-gap: 200;
+  page-break-inside: avoid;
+  break-inside: avoid-column;
+  font-family: "Poppins", sans-serif;
+  justify-content: space-between;
+}
+
+.skills > img {
+  display: flex;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .skills {
+    column-count: 2;
+  }
 }
